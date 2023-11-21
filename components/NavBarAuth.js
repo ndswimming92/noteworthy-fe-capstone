@@ -10,17 +10,17 @@ export default function NavBarAuth() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Link passHref href="/">
+        <Link passHref href="/notes">
           <Navbar.Brand>Noteworthy</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
-            <Link passHref href="/">
+            <Link passHref href="/notes">
               <Nav.Link>Notes</Nav.Link>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href="/notes/new">
               <Nav.Link>Note+</Nav.Link>
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>

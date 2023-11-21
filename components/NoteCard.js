@@ -14,19 +14,22 @@ function NoteCard({ noteObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '20rem', margin: '10px' }}>
-      <Card.Body>
-        <Card.Title>{noteObj.title}</Card.Title>
-        <p className="card-text bold">noteObj.category</p>
-        <Link href={`/note/${noteObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">View</Button>
-        </Link>
-        <Link href={`/note/edit/${noteObj.firebaseKey}`} passHref>
-          <Button variant="info">Edit</Button>
-        </Link>
-        <Button variant="danger" onClick={deleteANote} className="m-2">Delete</Button>
-      </Card.Body>
-    </Card>
+    <Link href={`/note/${noteObj.firebaseKey}`} passHref>
+      <Button variant="primary" className="m-2">
+        <Card style={{ width: '20rem', margin: '10px' }}>
+          <Card.Body>
+            <Card.Title>{noteObj.title}</Card.Title>
+            <p className="card-text bold">{noteObj.category}</p>
+            <p className="card-text bold">{noteObj.body}</p>
+            <p className="card-text bold">{noteObj.timeSubmitted}</p>
+            <Link href={`/note/edit/${noteObj.firebaseKey}`} passHref>
+              <Button variant="info">Edit</Button>
+            </Link>
+            <Button variant="danger" onClick={deleteANote} className="m-2">Delete</Button>
+          </Card.Body>
+        </Card>
+      </Button>
+    </Link>
   );
 }
 
@@ -34,6 +37,7 @@ NoteCard.prototype = {
   memberObj: PropTypes.shape({
     title: PropTypes.string,
     category: PropTypes.string,
+    body: PropTypes.string,
     timeSubmitted: PropTypes.string,
     firebaseKey: PropTypes.string,
   }).isRequired,
