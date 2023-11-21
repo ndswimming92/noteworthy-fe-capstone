@@ -15,7 +15,7 @@ function NoteCard({ noteObj, onUpdate }) {
 
   return (
     <Link href={`/note/${noteObj.firebaseKey}`} passHref>
-      <Button variant="primary" className="m-2">
+      <Button variant="light" className="m-2">
         <Card style={{ width: '20rem', margin: '10px' }}>
           <Card.Body>
             <Card.Title>{noteObj.title}</Card.Title>
