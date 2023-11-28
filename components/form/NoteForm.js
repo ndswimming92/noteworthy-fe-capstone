@@ -9,8 +9,9 @@ const initialState = {
   title: '',
   category: '',
   body: '',
-  timeSubmitted: '',
 };
+
+const categories = ['Personal', 'Work', 'Money', 'Food', 'Family', 'Transportation'];
 
 function NoteForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
@@ -32,10 +33,12 @@ function NoteForm({ obj }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const currentTime = new Date().toLocaleString();
+
     if (obj.firebaseKey) {
-      updateNote(formInput).then(() => router.push('/notes'));
+      updateNote({ ...formInput, timeSubmitted: currentTime }).then(() => router.push('/notes'));
     } else {
-      const payload = { ...formInput, uid: user.uid };
+      const payload = { ...formInput, uid: user.uid, timeSubmitted: currentTime };
       createNote(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
 
@@ -49,8 +52,8 @@ function NoteForm({ obj }) {
   return (
     <>
       <Form onSubmit={handleSubmit}>
+        <h1>Add a Note</h1>
         <Form.Group className="mb-3" controlId="formBasicName">
-          <h1>Add Note Title</h1>
           <Form.Label>Note Title</Form.Label>
           <Form.Control
             type="text"
@@ -63,20 +66,24 @@ function NoteForm({ obj }) {
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicCategory">
-          <h1>Add Note Category</h1>
           <Form.Label>Note Category</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter Note Category"
+          <Form.Select
+            placeholder="Select a Category"
             name="category"
             value={formInput.category}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="" disabled>Select a category</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
+          </Form.Select>
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicBody">
-          <h1>Add Note Title</h1>
           <Form.Label>Note Body</Form.Label>
           <Form.Control
             type="text"
