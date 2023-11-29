@@ -15,13 +15,13 @@ export default function ViewNote() {
 
   return (
     <>
-      <div className="mt-5 d-flex flex-wrap">
-        <div className="d-flex flex-column">
+      <div className="mt-5 d-flex justify-content-center">
+        <div className="d-flex flex-column align-items-center">
           <div className="text-white ms-5 title">
-            <h1>Note Title: {noteDetails.title || ''}</h1>
-            <h4>Note Category: {noteDetails.category || ''}</h4>
-            <h2>Note: {noteDetails.body || ''}</h2>
+            <h1 className="text-center">Note Title: {noteDetails.title || ''}</h1>
+            <h5>Category: {noteDetails.category || ''}</h5>
             <h5>Time Submitted: {noteDetails.timeSubmitted || ''}</h5>
+            <h2>Note: {noteDetails.body || ''}</h2>
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ function NoteCard({ noteObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '20rem', margin: '10px' }}>
+    <Card style={{ width: '25rem', margin: '15px' }}>
       <Card.Body>
         <Card.Title>{noteObj.title}</Card.Title>
         <p className="card-text bold">{noteObj.category}</p>

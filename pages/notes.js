@@ -18,7 +18,7 @@ function ShowNotes() {
   }, []);
 
   return (
-    <div className="text-center my-4">
+    <div className="text-center d-flex justify-content-center">
       <div className="d-flex flex-wrap">
         {notes.map((note) => (
           <NoteCard key={note.firebaseKey} noteObj={note} onUpdate={getAllTheNotes} />

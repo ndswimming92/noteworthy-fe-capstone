@@ -11,7 +11,7 @@ const initialState = {
   body: '',
 };
 
-const categories = ['Personal', 'Work', 'Money', 'Food', 'Family', 'Transportation'];
+const categories = ['Personal', 'Work', 'Money', 'Food', 'Family', 'Transportation', 'Other'];
 
 function NoteForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
@@ -52,7 +52,7 @@ function NoteForm({ obj }) {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h1>Add a Note</h1>
+        <h1 style={{ textAlign: 'center' }}>Add Note</h1>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label>Note Title</Form.Label>
           <Form.Control
@@ -62,6 +62,7 @@ function NoteForm({ obj }) {
             value={formInput.title}
             onChange={handleChange}
             required
+            style={{ textAlign: 'center' }}
           />
         </Form.Group>
 
@@ -73,6 +74,7 @@ function NoteForm({ obj }) {
             value={formInput.category}
             onChange={handleChange}
             required
+            style={{ textAlign: 'center' }}
           >
             <option value="" disabled>Select a category</option>
             {categories.map((category) => (
@@ -86,7 +88,8 @@ function NoteForm({ obj }) {
         <Form.Group className="mb-3" controlId="formBasicBody">
           <Form.Label>Note Body</Form.Label>
           <Form.Control
-            type="text"
+            type="textarea"
+            as="textarea"
             placeholder="Enter Note Body"
             name="body"
             value={formInput.body}
@@ -95,7 +98,7 @@ function NoteForm({ obj }) {
           />
         </Form.Group>
         <Button variant="primary" type="submit">
-          {obj.firebaseKey ? 'Update Note' : 'Add Note'}
+          {obj.firebaseKey ? 'Update' : 'Add Note'}
         </Button>
       </Form>
     </>
