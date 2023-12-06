@@ -23,6 +23,12 @@ export default function NavBarAuth() {
             <Link passHref href="/Note/new">
               <Nav.Link>Note+</Nav.Link>
             </Link>
+            <Link passHref href="/categories">
+              <Nav.Link>Categories</Nav.Link>
+            </Link>
+            <Link passHref href="/Category/new">
+              <Nav.Link>Category+</Nav.Link>
+            </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
         </Navbar.Collapse>

@@ -1,24 +1,27 @@
 import React, { useEffect, useState } from 'react';
+// Hook that navigates you to different pages
 import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import { Button, Form } from 'react-bootstrap';
 import { createNote, updateNote } from '../../api/noteData';
+// Hook
 import { useAuth } from '../../utils/context/authContext';
+import { getAllCategories } from '../../api/categoryData';
 
+// Creating a constant named initialState and assigning it an object with two properties.
 const initialState = {
   title: '',
-  category: '',
   body: '',
 };
 
-const categories = ['Personal', 'Work', 'Money', 'Food', 'Family', 'Transportation', 'Other'];
-
 function NoteForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
+  const [categories, setCategories] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
+    getAllCategories().then(setCategories);
     if (obj.firebaseKey) setFormInput(obj);
   }, [obj, user]);
 
@@ -66,20 +69,20 @@ function NoteForm({ obj }) {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicCategory">
+        <Form.Group label="Category" className="mb-3" controlId="formBasicCategory">
           <Form.Label>Note Category</Form.Label>
           <Form.Select
             placeholder="Select a Category"
-            name="category"
-            value={formInput.category}
+            name="category_id"
+            value={formInput.category_id}
             onChange={handleChange}
             required
             style={{ textAlign: 'center' }}
           >
-            <option value="" disabled>Select a category</option>
+            <option value="Category">Select a category</option>
             {categories.map((category) => (
-              <option key={category} value={category}>
-                {category}
+              <option key={category.firebaseKey} value={category.firebaseKey}>
+                {category.name}
               </option>
             ))}
           </Form.Select>
@@ -108,10 +111,10 @@ function NoteForm({ obj }) {
 NoteForm.propTypes = {
   obj: PropTypes.shape({
     title: PropTypes.string,
-    category: PropTypes.string,
     body: PropTypes.string,
     timeSubmitted: PropTypes.string,
     firebaseKey: PropTypes.string,
+    category_id: PropTypes.string,
   }),
 };
 

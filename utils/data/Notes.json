@@ -3,7 +3,7 @@
     "firebaseKey": "-NizQEJQoVIfraemXacu",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Conference Call Summary",
-    "category": "Family",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Nunc rhoncus dui vel sem.",
     "timeSubmitted": "1:09:47 PM"
   },
@@ -11,7 +11,7 @@
     "firebaseKey": "-NizQEJRZ5IrJCvd_BMW",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Task List",
-    "category": "School",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Vivamus in felis eu sapien cursus vestibulum. Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem. Duis aliquam convallis nunc.",
     "timeSubmitted": "8:01:49 PM"
   },
@@ -19,7 +19,7 @@
     "firebaseKey": "-NizQEJTUad2vgTe3IDh",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Important Reminder",
-    "category": "Health",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Nulla facilisi.",
     "timeSubmitted": "7:03:38 PM"
   },
@@ -27,7 +27,7 @@
     "firebaseKey": "-NizQEJUByZ9HIcZtUmW",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Project Update",
-    "category": "Personal",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui. Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
     "timeSubmitted": "12:34:28 PM"
   },
@@ -35,7 +35,7 @@
     "firebaseKey": "-NizQEJVV4e8jkD3QUbD",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Meeting Notes",
-    "category": "Work",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus. Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst. Maecenas ut massa quis augue luctus tincidunt.",
     "timeSubmitted": "11:04:53 AM"
   },
@@ -43,7 +43,7 @@
     "firebaseKey": "-NizQEJWpD2vkhmz-JqZ",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Important Reminder",
-    "category": "Family",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Nam nulla.",
     "timeSubmitted": "3:38:00 AM"
   },
@@ -51,7 +51,7 @@
     "firebaseKey": "-NizQEJXqqICYm1BGXQZ",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Important Reminder",
-    "category": "Finance",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia.",
     "timeSubmitted": "4:02:43 PM"
   },
@@ -59,7 +59,7 @@
     "firebaseKey": "-NizQEJYZal0tKVHdp0Y",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Project Update",
-    "category": "Work",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue. Vestibulum rutrum rutrum neque.",
     "timeSubmitted": "10:12:45 PM"
   },
@@ -67,7 +67,7 @@
     "firebaseKey": "-NizQEJZcA0ceMZfC12V",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Important Reminder",
-    "category": "Health",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Vivamus tortor. Duis mattis egestas metus.",
     "timeSubmitted": "6:57:04 PM"
   },
@@ -75,7 +75,7 @@
     "firebaseKey": "-NizQEJ_F6BEHetJhQpu",
     "uid": "YoLSDfkOdZN5YfbJtI7a9wri8EV2",
     "title": "Conference Call Summary",
-    "category": "School",
+    "category_id": "-NkNknCpZ8qloH0gHOAs",
     "body": "Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst.",
     "timeSubmitted": "4:50:13 AM"
   }
