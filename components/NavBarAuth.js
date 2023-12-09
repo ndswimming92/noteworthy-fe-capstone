@@ -5,6 +5,7 @@ import {
   Navbar, Container, Nav, Button,
 } from 'react-bootstrap';
 import { signOut } from '../utils/auth';
+import styles from './navBarAuth.module.css';
 
 export default function NavBarAuth() {
   return (
@@ -18,16 +19,16 @@ export default function NavBarAuth() {
           <Nav className="ms-auto">
             {/* CLOSE NAVBAR ON LINK SELECTION: https://stackoverflow.com/questions/72813635/collapse-on-select-react-bootstrap-navbar-with-nextjs-not-working */}
             <Link passHref href="/notes">
-              <Nav.Link>Notes</Nav.Link>
+              <Nav.Link className={styles['nav-link-jiggle']}>Notes</Nav.Link>
             </Link>
             <Link passHref href="/Note/new">
-              <Nav.Link>Note+</Nav.Link>
+              <Nav.Link className={styles['nav-link-jiggle']}>Note+</Nav.Link>
             </Link>
             <Link passHref href="/categories">
-              <Nav.Link>Categories</Nav.Link>
+              <Nav.Link className={styles['nav-link-jiggle']}>Categories</Nav.Link>
             </Link>
             <Link passHref href="/Category/new">
-              <Nav.Link>Category+</Nav.Link>
+              <Nav.Link className={styles['nav-link-jiggle']}>Category+</Nav.Link>
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
