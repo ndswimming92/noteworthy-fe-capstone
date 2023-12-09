@@ -27,7 +27,7 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
   const handleChange = (e) => { // defines an arrow function that takes an event object 'e' as it's parameter. Used as an event handler for form input changes.
     const { name, value } = e.target; // extract the "name" and "value" properties from the "target" property of the event object. "name" here represents the name attribute of the input, and "value" represents the current value of the input.
     setFormInput((prevState) => ({ // uses the setFormInput function, a state updater function from the useState hook to update the formInput state.
-      ...prevState, // this is a spread operator which allows you to iterate through an array. Opens the previous state to allow for changes.
+      ...prevState, // this is a spread operator which allows you to iterate through an array. Opens the previous state to allow for changes. Like a open box that you can put things in.
       [name]: value, // An object property name where the property name is dynamically determined by the "name" variable. the resulting object is a new state object that includes all properties of the previous state and updates the property with the name specified by "name"  to the new value specified by "value."
     }));
   };
