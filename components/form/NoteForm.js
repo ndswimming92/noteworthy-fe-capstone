@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'; // Hook that navigates you to different
 import PropTypes from 'prop-types';
 import { Button, Form } from 'react-bootstrap';
 import { createNote, updateNote } from '../../api/noteData';
-import { useAuth } from '../../utils/context/authContext'; // Hook
+import { useAuth } from '../../utils/context/authContext'; // This is our custom hook, destructuring the return from useAuth
 import { getAllCategories } from '../../api/categoryData';
 
 // Creating a constant named initialState and assigning it an object with two properties.
@@ -25,8 +25,8 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
   }, [obj, user]); // dependency array which means it will re-run whenever obj or user changes. This ensures the effect is triggered when either the note data 'obj' or the data 'user' changes.
 
   const handleChange = (e) => { // defines an arrow function that takes an event object 'e' as it's parameter. Used as an event handler for form input changes.
-    const { name, value } = e.target; // extract the "name" and "value" properties from the "target" property of the event object. "name" here represents the name attribute of the inpute, and "value" represents the current value of the input.
-    setFormInput((prevState) => ({ // uses the setFormInput function, a state updater function fro the useState hook to update the formInput state.
+    const { name, value } = e.target; // extract the "name" and "value" properties from the "target" property of the event object. "name" here represents the name attribute of the input, and "value" represents the current value of the input.
+    setFormInput((prevState) => ({ // uses the setFormInput function, a state updater function from the useState hook to update the formInput state.
       ...prevState, // this is a spread operator which allows you to iterate through an array. Opens the previous state to allow for changes.
       [name]: value, // An object property name where the property name is dynamically determined by the "name" variable. the resulting object is a new state object that includes all properties of the previous state and updates the property with the name specified by "name"  to the new value specified by "value."
     }));
@@ -60,7 +60,7 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
           <Form.Control
             type="text" // type of the input field.
             placeholder="Enter Note Title"
-            name="title" // sets the name attribute of the input field. Usefule when submitting form. The inpute data is sent with the associated name as part of the form data.
+            name="title" // sets the name attribute of the input field. Useful when submitting form. The inpute data is sent with the associated name as part of the form data.
             value={formInput.title} // Binds the value of the input field to the "title" property of the formInput state. A controlled component, meaning its value is controlled by the components state. Any changes t othe input will trigger a corresponding change in the "formInput" state.
             onChange={handleChange} // specifies the function to be called when the value of the input changes.Used to update the state in a controlled component.
             required // Makes this field a required field.
@@ -117,8 +117,8 @@ NoteForm.propTypes = { // adds a "propTypes" property to the "NoteForm" componen
   }),
 };
 
-NoteForm.defaultProps = { // adds the "defaultProps" property t othe NoteForm component. "defaultProps" is an object that provides default values for the component's props.
-  obj: initialState, // specifies that if the "obj" prop is not provided when using the "NoteForm" component, it will default t othe value of "initialState".
+NoteForm.defaultProps = { // adds the "defaultProps" property to the NoteForm component. "defaultProps" is an object that provides default values for the component's props.
+  obj: initialState, // specifies that if the "obj" prop is not provided when using the "NoteForm" component, it will default to the value of "initialState".
 };
 
 export default NoteForm; // Exports the "NoteForm" component as the default export from the file. Allows other files to import and use the "NoteForm" component using the "import" statement.
