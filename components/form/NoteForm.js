@@ -78,7 +78,7 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
             required
             style={{ textAlign: 'center' }}
           >
-            <option value="Category">Select a category</option>
+            <option value="Category">Select category</option>
             {categories.map((category) => (
               <option key={category.firebaseKey} value={category.firebaseKey}>
                 {category.name}
@@ -99,9 +99,11 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
             required
           />
         </Form.Group>
-        <Button variant="primary" type="submit"> {/* sets button to primary color, and indicates the button is associated with a form and wil trigger form submission */}
-          {obj.firebaseKey ? 'Update' : 'Add Note'} {/* ternary operator and conditional statement */}
-        </Button>
+        <div className="d-flex justify-content-center">
+          <Button variant="primary" type="submit"> {/* sets button to primary color, and indicates the button is associated with a form and wil trigger form submission */}
+            {obj.firebaseKey ? 'Update' : 'Add Note'} {/* ternary operator and conditional statement */}
+          </Button>
+        </div>
       </Form>
     </>
   );
