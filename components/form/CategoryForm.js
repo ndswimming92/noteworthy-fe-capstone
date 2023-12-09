@@ -46,10 +46,10 @@ function CategoryForm({ obj }) {
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h1 style={{ textAlign: 'center' }}>Add Category</h1>
+        <h1 style={{ textAlign: 'center', color: 'white' }}>Add Category</h1>
 
         <Form.Group className="mb-3" controlId="floatingInput2">
-          <Form.Label>Note Category</Form.Label>
+          <Form.Label style={{ color: 'white' }}>Note Category</Form.Label>
           <Form.Control
             type="text"
             placeholder="Enter a Category"

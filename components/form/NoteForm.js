@@ -54,9 +54,9 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h1 style={{ textAlign: 'center' }}>Add Note</h1>
+        <h1 style={{ color: 'white', textAlign: 'center' }}>Add Note</h1>
         <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Label>Note Title</Form.Label>
+          <Form.Label style={{ color: 'white' }}>Note Title</Form.Label>
           <Form.Control
             type="text" // type of the input field.
             placeholder="Enter Note Title"
@@ -69,7 +69,7 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
         </Form.Group>
 
         <Form.Group label="Category" className="mb-3" controlId="formBasicCategory">
-          <Form.Label>Note Category</Form.Label>
+          <Form.Label style={{ color: 'white' }}>Note Category</Form.Label>
           <Form.Select
             placeholder="Select a Category"
             name="category_id"
@@ -88,7 +88,7 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicBody">
-          <Form.Label>Note Body</Form.Label>
+          <Form.Label style={{ color: 'white' }}>Note Body</Form.Label>
           <Form.Control
             type="textarea"
             as="textarea"
