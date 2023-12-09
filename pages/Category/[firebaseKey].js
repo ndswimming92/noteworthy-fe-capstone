@@ -33,7 +33,7 @@ export default function ViewCategory() {
       <div className="mt-5 d-flex justify-content-center">
         <div className="d-flex flex-column align-items-center">
           <div className="text-white ms-5 title">
-            <h1 className="text-center">Note Category: {categoryDetails.category || ''}</h1>
+            <h1 color="white" className="text-center">Note Category: {categoryDetails.category || ''}</h1>
           </div>
         </div>
       </div>

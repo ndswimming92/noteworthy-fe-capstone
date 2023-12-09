@@ -14,7 +14,10 @@ function CategoryCard({ categoryObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '25rem', margin: '15px' }}>
+    <Card style={{
+      backgroundColor: '#198CB0E5', color: '#FFFFFF', width: '25rem', margin: '15px',
+    }}
+    >
       <Card.Body>
         <Card.Title>{categoryObj.name}</Card.Title>
         <Link href={`/Category/edit/${categoryObj.firebaseKey}`} passHref>
