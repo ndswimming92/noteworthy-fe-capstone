@@ -52,7 +52,7 @@ function CategoryForm({ obj }) {
           <Form.Label style={{ color: 'white' }}>Note Category</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter a Category"
+            placeholder="Enter Category"
             name="name"
             value={formInput.name}
             onChange={handleChange}
@@ -61,9 +61,11 @@ function CategoryForm({ obj }) {
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
-          {obj.firebaseKey ? 'Update' : 'Add Category'}
-        </Button>
+        <div className="d-flex justify-content-center">
+          <Button variant="primary" type="submit">
+            {obj.firebaseKey ? 'Update' : 'Add Category'}
+          </Button>
+        </div>
       </Form>
     </>
   );
