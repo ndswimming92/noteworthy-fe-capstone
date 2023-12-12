@@ -54,7 +54,7 @@ function NoteForm({ obj }) { // defines a react function component that takes a 
   return (
     <>
       <Form onSubmit={handleSubmit}>
-        <h1 style={{ color: 'white', textAlign: 'center' }}>Add Note</h1>
+        <h1 style={{ color: 'white', textAlign: 'center', marginTop: '2rem' }}>Add Note</h1>
         <Form.Group className="mb-3" controlId="formBasicName">
           <Form.Label style={{ color: 'white' }}>Note Title</Form.Label>
           <Form.Control

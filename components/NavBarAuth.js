@@ -22,13 +22,13 @@ export default function NavBarAuth() {
               <Nav.Link className={styles['nav-link-jiggle']}>Notes</Nav.Link>
             </Link>
             <Link passHref href="/Note/new">
-              <Nav.Link className={styles['nav-link-jiggle']}>Note+</Nav.Link>
+              <Nav.Link className={styles['nav-link-jiggle']}>Add Note</Nav.Link>
             </Link>
             <Link passHref href="/categories">
               <Nav.Link className={styles['nav-link-jiggle']}>Categories</Nav.Link>
             </Link>
             <Link passHref href="/Category/new">
-              <Nav.Link className={styles['nav-link-jiggle']}>Category+</Nav.Link>
+              <Nav.Link className={styles['nav-link-jiggle']}>Add Category</Nav.Link>
             </Link>
             <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
