@@ -18,11 +18,14 @@ function ShowNotes() {
   }, []);
 
   return (
-    <div className="text-center d-flex justify-content-center">
-      <div className="d-flex flex-wrap">
-        {notes.map((note) => (
-          <NoteCard key={note.firebaseKey} noteObj={note} onUpdate={getAllTheNotes} />
-        ))}
+    <div className="text-center justify-content-center" style={{ color: 'white', marginTop: '2rem' }}>
+      <h1>Notes</h1>
+      <div className="text-center justify-content-center" style={{ marginTop: '2.5rem' }}>
+        <div className="d-flex flex-wrap">
+          {notes.map((note) => (
+            <NoteCard key={note.firebaseKey} noteObj={note} onUpdate={getAllTheNotes} />
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,12 @@
   animation: jiggle 0.8s ease infinite;
 }
 
+.nav-link-jiggle {
+  margin-right: 3px;
+  border-right: 1px solid white;
+  padding-right: 10px;
+}
+
 @keyframes jiggle {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(5);
