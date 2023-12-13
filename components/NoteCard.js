@@ -18,7 +18,7 @@ function NoteCard({ noteObj, onUpdate }) {
     });
   }, [noteObj.category_id]);
 
-  const timeSubmitted = new Date(noteObj.timeSubmitted).toLocaleString();
+  const timeSubmitted = new Date(noteObj.timeSubmitted).toLocaleDateString();
 
   const deleteANote = () => {
     if (window.confirm(`Do you really want to delete the note: ${noteObj.title}?`)) {
@@ -29,10 +29,10 @@ function NoteCard({ noteObj, onUpdate }) {
   return (
     <Card style={{
       backgroundColor: '#08224A',
-      color: '#00C5F1',
+      color: 'white',
       width: '25rem',
       margin: '15px',
-      border: '3px solid white',
+      border: '3px solid #00C5F1',
     }}
     >
       <Card.Body>

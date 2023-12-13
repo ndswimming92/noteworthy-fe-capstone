@@ -18,10 +18,10 @@ function CategoryCard({ categoryObj, onUpdate }) {
   return (
     <Card style={{
       backgroundColor: '#08224A',
-      color: '#FFFFFF',
+      color: 'white',
       width: '25rem',
       margin: '15px',
-      border: '3px solid white',
+      border: '3px solid #00C5F1',
     }}
     >
       <Card.Body>
