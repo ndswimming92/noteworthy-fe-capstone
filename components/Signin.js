@@ -11,10 +11,11 @@ function Signin() {
         padding: '30px',
         maxWidth: '400px',
         margin: '0 auto',
+        color: 'white',
       }}
     >
-      <h1 style={{ color: 'white' }}>Hi there!</h1>
-      <p style={{ color: 'white' }}>Click the button below to login!</p>
+      <h1>Hi there!</h1>
+      <p>Click the button below to login!</p>
       <Button type="button" size="lg" className="btn btn-success" onClick={signIn}>
         Sign In
       </Button>
