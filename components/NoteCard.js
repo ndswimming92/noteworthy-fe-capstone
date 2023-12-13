@@ -18,7 +18,7 @@ function NoteCard({ noteObj, onUpdate }) {
     });
   }, [noteObj.category_id]);
 
-  const timeSubmitted = new Date(noteObj.timeSubmitted).toLocaleString();
+  const timeSubmitted = new Date(noteObj.timeSubmitted).toLocaleDateString();
 
   const deleteANote = () => {
     if (window.confirm(`Do you really want to delete the note: ${noteObj.title}?`)) {
@@ -28,7 +28,11 @@ function NoteCard({ noteObj, onUpdate }) {
 
   return (
     <Card style={{
-      backgroundColor: '#198CB0E5', color: '#00C5F1', width: '25rem', margin: '15px',
+      backgroundColor: '#08224A',
+      color: 'white',
+      width: '25rem',
+      margin: '15px',
+      border: '3px solid #00C5F1',
     }}
     >
       <Card.Body>
@@ -36,12 +40,12 @@ function NoteCard({ noteObj, onUpdate }) {
         <p className="card-text bold">{category}</p>
         <p className="card-text bold">{timeSubmitted}</p>
         <Link href={`/Note/${noteObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2"><FontAwesomeIcon icon={faEye} /></Button>
+          <Button variant="outline-warning" className="m-2"><FontAwesomeIcon icon={faEye} /></Button>
         </Link>
         <Link href={`/Note/edit/${noteObj.firebaseKey}`} passHref>
-          <Button variant="info"><FontAwesomeIcon icon={faEdit} /></Button>
+          <Button variant="outline-info"><FontAwesomeIcon icon={faEdit} /></Button>
         </Link>
-        <Button variant="danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+        <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
       </Card.Body>
     </Card>
   );

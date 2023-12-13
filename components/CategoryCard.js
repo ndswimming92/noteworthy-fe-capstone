@@ -17,15 +17,19 @@ function CategoryCard({ categoryObj, onUpdate }) {
 
   return (
     <Card style={{
-      backgroundColor: '#198CB0E5', color: '#FFFFFF', width: '25rem', margin: '15px',
+      backgroundColor: '#08224A',
+      color: 'white',
+      width: '25rem',
+      margin: '15px',
+      border: '3px solid #00C5F1',
     }}
     >
       <Card.Body>
         <Card.Title>{categoryObj.name}</Card.Title>
         <Link href={`/Category/edit/${categoryObj.firebaseKey}`} passHref>
-          <Button variant="info"><FontAwesomeIcon icon={faEdit} /></Button>
+          <Button variant="outline-info"><FontAwesomeIcon icon={faEdit} /></Button>
         </Link>
-        <Button variant="danger" onClick={deleteACategory} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+        <Button variant="outline-danger" onClick={deleteACategory} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
       </Card.Body>
     </Card>
   );
