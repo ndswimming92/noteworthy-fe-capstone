@@ -1,3 +1,37 @@
+.brandHover {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.brandHover::before,
+.brandHover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.brandHover::before {
+  top: 0;
+  left: 0;
+}
+
+.brandHover::after {
+  bottom: 0;
+  right: 0;
+}
+
+.brandHover:hover::before {
+  width: 100%;
+}
+
+.brandHover:hover::after {
+  width: 100%;
+}
+
 .nav-link-jiggle:hover {
   animation: jiggle 0.8s ease infinite;
 }
