@@ -19,7 +19,7 @@ export default function ViewNote() {
         <div className="d-flex flex-column align-items-center">
           <div className="text-white ms-5 title">
             <h1 style={{ marginBottom: '5rem' }} className="text-center">Title: {noteDetails.title || ''}</h1>
-            <h5 style={{ marginBottom: '5rem' }} className="text-center">Time Submitted: {noteDetails.timeSubmitted || ''}</h5>
+            <h5 style={{ marginBottom: '5rem' }} className="text-center">Submitted: {noteDetails.timeSubmitted || ''}</h5>
             <h2>Note: {noteDetails.body || ''}</h2>
           </div>
         </div>

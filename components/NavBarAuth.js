@@ -12,7 +12,7 @@ export default function NavBarAuth() {
     <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
       <Container>
         <Link passHref href="/notes">
-          <Navbar.Brand>Noteworthy</Navbar.Brand>
+          <Navbar.Brand className={styles.brandHover}>Noteworthy</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
