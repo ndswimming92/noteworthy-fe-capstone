@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faEdit, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { deleteNote } from '../api/noteData';
 import { getSingleCategory } from '../api/categoryData';
 
@@ -27,29 +27,31 @@ function NoteCard({ noteObj, onUpdate }) {
   };
 
   return (
-    <Card style={{
-      backgroundColor: '#08224A',
-      color: 'white',
-      width: '25rem',
-      margin: '15px',
-      border: '3px solid #00C5F1',
-    }}
-    >
-      <Card.Body>
-        <Card.Title className="text-center">{noteObj.title}</Card.Title>
-        <p className="card-text bold text-center">{category}</p>
-        <p className="card-text bold text-center">{timeSubmitted}</p>
-        <div className="d-flex justify-content-center">
-          <Link href={`/Note/${noteObj.firebaseKey}`} passHref>
-            <Button variant="outline-warning" className="m-2"><FontAwesomeIcon icon={faEye} /></Button>
-          </Link>
-          <Link href={`/Note/edit/${noteObj.firebaseKey}`} passHref>
-            <Button variant="outline-info" className="m-2"><FontAwesomeIcon icon={faEdit} /></Button>
-          </Link>
-          <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
-        </div>
-      </Card.Body>
-    </Card>
+    <Link href={`/Note/${noteObj.firebaseKey}`} passHref>
+      <Card
+        as="a" // Make Card act as an anchor (link)
+        style={{
+          backgroundColor: '#08224A',
+          color: 'white',
+          width: '25rem',
+          margin: '15px',
+          border: '3px solid #00C5F1',
+          cursor: 'pointer', // Show pointer cursor on hover
+        }}
+      >
+        <Card.Body>
+          <Card.Title className="text-center">{noteObj.title}</Card.Title>
+          <p className="card-text bold text-center">{category}</p>
+          <p className="card-text bold text-center">{timeSubmitted}</p>
+          <div className="d-flex justify-content-center">
+            <Link href={`/Note/edit/${noteObj.firebaseKey}`} passHref>
+              <Button variant="outline-info" className="m-2"><FontAwesomeIcon icon={faEdit} /></Button>
+            </Link>
+            <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+          </div>
+        </Card.Body>
+      </Card>
+    </Link>
   );
 }
 
