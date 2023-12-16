@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 import { deleteCategory } from '../api/categoryData';
 
 function CategoryCard({ categoryObj, onUpdate }) {
@@ -26,6 +26,9 @@ function CategoryCard({ categoryObj, onUpdate }) {
     >
       <Card.Body>
         <Card.Title>{categoryObj.name}</Card.Title>
+        <Link href={`/Category/${categoryObj.firebaseKey}`} passHref>
+          <Button variant="outline-warning" className="m-2"><FontAwesomeIcon icon={faEye} /></Button>
+        </Link>
         <Link href={`/Category/edit/${categoryObj.firebaseKey}`} passHref>
           <Button variant="outline-info"><FontAwesomeIcon icon={faEdit} /></Button>
         </Link>

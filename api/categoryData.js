@@ -70,6 +70,17 @@ const getCategoryDetails = async (firebaseKey) => {
   return { ...category };
 };
 
+const getCategoryNotes = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/note.json?orderBy="category_id"&equalTo="${firebaseKey}"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
+
 export {
   getAllCategories,
   getSingleCategory,
@@ -77,4 +88,5 @@ export {
   updateCategory,
   deleteCategory,
   getCategoryDetails,
+  getCategoryNotes,
 };

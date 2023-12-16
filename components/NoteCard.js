@@ -36,16 +36,18 @@ function NoteCard({ noteObj, onUpdate }) {
     }}
     >
       <Card.Body>
-        <Card.Title>{noteObj.title}</Card.Title>
-        <p className="card-text bold">{category}</p>
-        <p className="card-text bold">{timeSubmitted}</p>
-        <Link href={`/Note/${noteObj.firebaseKey}`} passHref>
-          <Button variant="outline-warning" className="m-2"><FontAwesomeIcon icon={faEye} /></Button>
-        </Link>
-        <Link href={`/Note/edit/${noteObj.firebaseKey}`} passHref>
-          <Button variant="outline-info"><FontAwesomeIcon icon={faEdit} /></Button>
-        </Link>
-        <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+        <Card.Title className="text-center">{noteObj.title}</Card.Title>
+        <p className="card-text bold text-center">{category}</p>
+        <p className="card-text bold text-center">{timeSubmitted}</p>
+        <div className="d-flex justify-content-center">
+          <Link href={`/Note/${noteObj.firebaseKey}`} passHref>
+            <Button variant="outline-warning" className="m-2"><FontAwesomeIcon icon={faEye} /></Button>
+          </Link>
+          <Link href={`/Note/edit/${noteObj.firebaseKey}`} passHref>
+            <Button variant="outline-info" className="m-2"><FontAwesomeIcon icon={faEdit} /></Button>
+          </Link>
+          <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+        </div>
       </Card.Body>
     </Card>
   );
