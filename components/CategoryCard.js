@@ -34,7 +34,9 @@ function CategoryCard({ categoryObj, onUpdate }) {
             <Link href={`/Category/edit/${categoryObj.firebaseKey}`} passHref>
               <Button variant="outline-info" className="m-2"><FontAwesomeIcon icon={faEdit} /></Button>
             </Link>
-            <Button variant="outline-danger" onClick={deleteACategory} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+            <Link href="/categories" passHref>
+              <Button variant="outline-danger" onClick={deleteACategory} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+            </Link>
           </div>
         </Card.Body>
       </Card>
