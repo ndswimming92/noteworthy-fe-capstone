@@ -47,7 +47,9 @@ function NoteCard({ noteObj, onUpdate }) {
             <Link href={`/Note/edit/${noteObj.firebaseKey}`} passHref>
               <Button variant="outline-info" className="m-2"><FontAwesomeIcon icon={faEdit} /></Button>
             </Link>
-            <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+            <Link href="/notes" passHref>
+              <Button variant="outline-danger" onClick={deleteANote} className="m-2"><FontAwesomeIcon icon={faTrash} /></Button>
+            </Link>
           </div>
         </Card.Body>
       </Card>
